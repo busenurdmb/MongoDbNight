@@ -63,7 +63,7 @@ PDF ve Excel İşlemleri: Müşteri bilgilerini PDF olarak indirme ve sipariş l
 - 🎡 Code First: Veritabanı şemasının uygulama tarafında kodlanıp veritabanına aktarıldığı yaklaşım.
 - 🗃️ MongoDB: NoSQL veritabanı yönetimi ve depolama için tercih edildi.
 - 🎨 HTML/CSS/Bootstrap: Arayüz tasarımı için kullanıldı.
-- ⌨️ LINQ: Veri sorgulama ve düzenleme için kullanılan bir dil
+
 
 
    ![d](https://github.com/busenurdmb/MongoDbNight/blob/master/MongoDbNight/wwwroot/mongo.gif)
