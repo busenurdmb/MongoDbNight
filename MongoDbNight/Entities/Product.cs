@@ -14,9 +14,9 @@ namespace MongoDbNight.Entities
         public decimal Price { get; set; }
         public int Stock { get; set; }
 
-        public string? ImageUrl { get; set; }
-        public string? SavedUrl { get; set; }
-        public string? SavedFileName { get; set; }
+        public string ImageUrl { get; set; }
+        public string SavedUrl { get; set; }
+        public string SavedFileName { get; set; }
 
         [BsonRepresentation(BsonType.ObjectId)]
         public string CategoryId { get; set; }

@@ -1,5 +1,8 @@
 using Microsoft.Extensions.Options;
 using MongoDbNight.Services.CategoryServices;
+using MongoDbNight.Services.CustomerServices;
+using MongoDbNight.Services.GoogleClouds;
+using MongoDbNight.Services.OrderServices;
 using MongoDbNight.Services.ProductServices;
 using MongoDbNight.Settings;
 using System.Reflection;
@@ -10,6 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Scoped: Her istek (request) için bir örnek oluþturulur.
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+
+builder.Services.Configure<GCSConfigOptions>(builder.Configuration);
+builder.Services.AddSingleton<ICloudStorageService, CloudStorageService>();
 
 // Geçerli assembly'deki tüm AutoMapper profillerini tarar ve AutoMapper'ý yapýlandýrýr.
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
